@@ -1,0 +1,22 @@
+.page-template-dresses {
+    .filter-bar {
+        flex-basis:100%;
+        .wrapper {
+            flex-basis: 100%;
+            .item_1_4 {
+                padding:$half-gr;
+
+                h2 {
+                    margin: 0 0 1rem;
+                    line-height: 1.3em;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .container-md-lg-1 {
+        .filter-bar {
+            flex-basis:20%;
+        }
+    }
+}

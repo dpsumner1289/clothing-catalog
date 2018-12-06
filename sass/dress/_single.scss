@@ -1,0 +1,119 @@
+body.single-dress {
+    section.flex {
+        .dress-image {
+            text-align: right;
+            img {
+                box-shadow: 1px 6px 8px #ccc;
+            }
+
+            @include breakpoint(tablet) {
+                text-align:center;
+            }
+        }
+        h1 {
+            font-family: "Lato",sans-serif;
+            font-weight: lighter;
+            color: $gunmetal;
+            padding: $half-gr $golden_ratio;
+            font-size: 45px;
+        }
+        .dress_meta {
+            background-color: $white;
+            box-shadow: 2px 6px 9px #ccc;
+            margin-left: -$golden_ratio;
+            padding: $golden_ratio $half-gr;
+
+            aside {
+                margin-bottom:$golden_ratio;
+                .item_1_4 {
+                    padding-right: $golden_ratio;
+                    text-align: right;
+                    @include breakpoint(phablet) {
+                        width: 45% !important;
+                        flex-basis: 45% !important;
+                        text-align: justify;
+                    }
+                }
+                .item_3_4 {
+                    @include breakpoint(phablet) {
+                        width: 55% !important;
+                        flex-basis: 55% !important;
+                    }
+                }
+                &.price, &.material, &.shape {
+                    .item_3_4 {
+                        color: rgb(165, 165, 165);
+                        font-size: 22px;
+                        font-weight: lighter;
+                        text-transform: uppercase;
+                    }
+                }
+                &.designer {
+                    img {
+                        max-height: 35px;
+                        width: auto;
+                    }
+                }
+            }
+            .buttons {
+                .button {
+                    width: 98%;
+                    text-align: center;
+                    margin: 0 auto;
+                    padding: $half-gr $golden_ratio;
+                }
+            }
+            @include breakpoint(tablet) {
+                margin:0;
+
+                .buttons {
+                    .item_1_2 {
+                        margin-bottom:$half-gr;
+                    }
+                    .button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .social-share {
+            padding: $half-gr $half-gr 0;
+            text-align: center;
+        }
+        .dress-sidebar {
+            padding: 0 2.236rem;
+            .widget_nav_menu {
+                h2.widget-title {
+                    &:after {
+                        max-width: 250px;
+                    }
+                }
+                a {
+                    text-decoration: underline !important;
+                }
+            }
+        }
+        @include heading-underline($pink, left);
+    }
+    a.back-dresses {
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+    section.suggestions {
+        h2 {
+            padding: 0 5px;
+        }
+        .item_1_4 {
+            padding: 0 5px;
+            position: relative;
+            text-align: center;
+            @include ease();
+
+            &:hover {
+                transform: scale(1.1);
+                z-index: 9;
+            }
+        }
+    }
+}

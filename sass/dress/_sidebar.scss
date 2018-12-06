@@ -1,0 +1,76 @@
+.dress-sidebar {
+    padding:0 $half-gr;
+    h3 {
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: left;
+        border-bottom:1px solid #e4e4e4;
+        color:$gunmetal;
+        padding:0 0 $half-gr;
+        margin-top: 0;
+
+        i {
+            div.tooltip {
+                position: absolute;
+                width: 100%;
+                left: -999em;
+                background:$white;
+                padding:$half-gr;
+                font-size:14px;
+                text-transform: none;
+                opacity: 0;
+                transition: .3s opacity ease;
+                box-shadow: 1px 1px 6px #eee;
+            }
+            &:hover {
+                div.tooltip {
+                    transition: .3s opacity ease;
+                    left:0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .item_1_4 {
+        @include breakpoint(tablet) {
+            width:100% !important;
+            flex-basis:100% !important;
+        }
+    }
+    ul.filter-list {
+        margin:0 0 $golden_ratio;
+        padding:0;
+        list-style-type: none;
+        li.filter-category {
+            padding-bottom:$half-gr;
+            padding-left:5px;
+
+            input {
+                margin:0;
+                padding:0;
+                color:$pink;
+            }
+            label {
+                padding-left:$half-gr;
+                color:$pink;
+            }
+        }
+    }
+    section.widget {
+        h2 {
+            @include heading-underline($pink, left);
+        }
+        ul.menu {
+            margin:0;
+            padding:0;
+            list-style-type: none;
+            li {
+                padding-bottom: 5px;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

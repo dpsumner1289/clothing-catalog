@@ -1,0 +1,99 @@
+.page-template-dress-list, .page-template-dresses {
+    h1 {
+        width:100%;
+        text-align: center;
+        padding-left:$half-gr;
+        padding-right:$half-gr;
+
+        &.leftgray {
+            text-align:left;
+            color:$gunmetal;
+            padding:0;
+        }
+    }
+    .template-dress {
+        padding-top: 0;
+
+        .dress-list {
+            padding:0 $golden_ratio;
+            &.featured {
+                flex-basis:100%;
+                .dress-list {
+                    padding:0;
+                }
+            }
+            .posts-list  {
+                flex-basis:100%;
+                width:100%;
+                .loading {
+                    width:100%;
+                    color:$pink;
+                    font-size:60px;
+                    text-align: center;
+                    margin-block-end: 3.326rem;
+                }
+            }
+            div.dress{
+                position: relative;
+                @include ease();
+                justify-content: center;
+
+                img {
+                    border: 2px solid transparent;
+                    @include ease();
+                }
+            
+                figure {
+                    margin:0;
+                    position: relative;
+                }
+                .dress_meta {
+                    position: absolute;
+                    bottom: 3%;
+                    padding: .89rem;
+                    width: 96%;
+                    left:2%;
+                    background:rgba($white, .8);
+            
+                    .dress_name {
+                        margin-right:auto;
+                        text-transform: uppercase
+                    }
+                    .dress_budget {
+                        color:$gray;
+                    }
+                }
+            
+                &:hover {
+                    transform: scale(1.1);
+                    z-index: 9;
+                    img {
+                        border-color:$white;
+                    }
+                }
+            }
+        }
+    }
+    .pagination {
+        justify-content: space-between;
+        position: relative;
+        padding-top:$half-gr;
+        margin-top: $golden_ratio;
+        a {
+            cursor: pointer;
+        }
+        a, span {
+            margin: 0 7px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left:0;
+            border-top: 1px solid $pink;
+            border-bottom: 3px solid $pink;
+            height:6px;
+            top: 0;
+        }
+    }
+}
